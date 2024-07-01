@@ -8,7 +8,9 @@ Integrative single cell analysis with Taiji framework, featuring:
 -  binary classification model
 
 <img src="https://github.com/cong-003/Taiji_ALTRA/blob/main/figures/workflow.png" width="800">
+
 ## Resources
--  tutorial and demo
+-  tutorial and demo:
+-  talk at ACR meeting: https://acrabstracts.org/abstract/integrated-single-cell-multi-omics-analysis-in-at-risk-for-future-rheumatoid-arthritis-ra-and-early-ra-reveals-shared-transcription-factor-profiles-in-multiple-cell-lineages/ 
 
 ## How to cite
