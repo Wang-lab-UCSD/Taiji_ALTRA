@@ -5,9 +5,10 @@
 # outputs:
 # data:
 ## 1. pr.csv: processed PageRank scores
-## 2. rna.csv: gene expression of all genes
-## 3. rna_TF.csv: gene expression of all TFs
-## 4. mycolors.rds: fixed color palette, will be used in all downstream analysis
+## 2. pr_normed2.csv: normalized PageRanks
+## 3. rna.csv: gene expression of all genes
+## 4. rna_TF.csv: gene expression of all TFs
+## 5. mycolors.rds: fixed color palette, will be used in all downstream analysis
 # plots:
 ## 1. age distribution 
 ## 2. sex distribution
@@ -24,50 +25,18 @@ library(dplyr)
 maindir <- "/home/jupyter/output_20230310/post-analysis/" 
 setwd(maindir)
 set.seed(42)
-tmp <- lapply(list.files(path = "scripts/functions/", pattern = "*\\.R",full.names = T),source)
 
-## ------------- load rna data ----------------------------------
-readRNA <- function(dir){
-  
-  # read raw file
-  fl <- paste0(dir,"/expression_profile.tsv")
-  rna <- read.table(fl, check.names = F)
-  row.names(rna) <- toupper(rownames(rna))
-  row.names(rna) <- gsub("\\(.*","",toupper(rownames(rna))) # remove "(UNKNOWN_TAIJI)"
-  rna <- rna[complete.cases(rna),]
-  
-  # column-wise TPM-normalized
-  ## remove columns whose expression values are all zeroes
-  rna <- rna[,colSums(rna)>0]
-  rna <- 10^6 * as.data.frame(scale(as.matrix(rna), center = F, scale = colSums(as.matrix(rna))))
-  
-  # remove rows whose expression levels are all zeroes
-  rna <- rna[rowSums(rna)>0,]
-  
-  return(rna)
-}
+## load some functions
+tmp <- lapply(list.files(path = "scripts/utils/", pattern = "*\\.R",full.names = T),source)
 
+
+## load rna data 
 rna <- readRNA("../RNASeq/")
-genes <- rownames(rna)
 
-
-##load pagerank data -------------------------
-load_pr <- function(dir,samples=NULL){
-  fl <- paste0(dir,"/GeneRanks.tsv")
-  df <- read.table(fl, check.names = F)
-  df <- df[!rownames(df) %in% c("DNMT1"),]
-  
-  # some samples have zero expression value for all genes and need to be removed (optional)
-  # some samples have small ATAC-seq peaks so pagerank is abnormal
-  if (!is.null(samples)){
-      df <- df[,colnames(df) %in% samples]
-  }
-  return(df)
-}
-
+## load pagerank data 
 pr <- load_pr("../")
 
-# # ------------- read group info ----------------------------------
+## read group info 
 meta <- read.csv("metadata_20230310_expand.csv") %>% dplyr::filter(id %in% colnames(pr)) %>%
         dplyr::inner_join(meta_s, by = "subject.subjectGuid", suffix = c("","")) %>%
         dplyr::filter(!preClust == "Doublet") %>%
@@ -83,13 +52,14 @@ samples <- unique(meta$id)
 pr <- pr[All_TFs,samples]
 rna_TF <- rna[All_TFs,samples] # subset of rna with only TFs' expression
 rna <- rna[,samples]
-
+pr_normed2 <- zscore(pr)
 
 
 # save to file
 write.table(pr, "pr.tsv", sep = "\t", quote=F)
 write.table(rna_TF, "rna_TF.tsv", sep = "\t", quote=F)
 write.table(meta, "meta.tsv", sep='\t', quote=F, row.names=F)
+write.table(pr_normed2, "pr_normed2.tsv", sep = "\t", quote=F)
 
 
 ## fix the annotation colors-------------------------------------------------------------
