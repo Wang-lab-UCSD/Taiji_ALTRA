@@ -2,8 +2,7 @@
 Integrative single cell analysis with Taiji framework, featuring:
 -  preprocessing of single cell RNA-seq and ATAC-seq
 -  co-embedding of single cell RNA-seq and ATAC-seq
--  unsupervised clustering with Kmeans
--  group-wise and individual-wise comparison
+-  [signature identification with unsupervised Kmeans clustering](https://nbviewer.org/github/cong-003/Taiji_ALTRA/blob/main/tutorial/Fig_signature.ipynb#)
 -  cellular communication network analysis
 -  binary classification model
 
