@@ -1,4 +1,13 @@
 # basically follow the cellchat tutorial with minor customization
+# inputs:
+## 1. `sample_labeled_v2.h5seurat` for RNA embedding
+## 2. `Save-Block1-JointCCA.rds` in `sample/RNAIntegration/GeneIntegrationMatrix/` folder for co-embedding
+
+# outputs:
+## 1. `sample_rna_coembed.h5seurat`: input for cellchat
+## 2. `sample_cellchat_obj.rds`: cellchat object, will be used for downstream analysis
+## 3. `sample_all_ccc.csv`: summary of all the inferred cell-cell communications at the level of ligands/receptors
+
 library(Seurat)
 library(SeuratDisk)
 library(dplyr)
@@ -6,8 +15,8 @@ library(CellChat)
 library(patchwork)
 
 meta <- read.table("dataFreeze_20230310_filtered.csv", sep = ",", header = T) 
-arrows <- list.files(path="cache/",pattern = ".arrow",recursive = T, full.names = T)
-rnas <- list.files(path = 'cache/', pattern = "labeled.h5",recursive = T, full.names = T)
+arrows <- list.files(path="cache/",pattern = ".arrow", recursive = T, full.names = T)
+rnas <- list.files(path = 'cache/', pattern = "labeled.h5", recursive = T, full.names = T)
 samples <- unique(meta$sample.sampleKitGuid)
 print(samples)
 print(length(samples))
