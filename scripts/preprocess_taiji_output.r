@@ -5,10 +5,9 @@
 # outputs:
 # data:
 ## 1. pr.csv: processed PageRank scores
-## 2. pr_normed2.csv: normalized PageRanks
-## 3. rna.csv: gene expression of all genes
-## 4. rna_TF.csv: gene expression of all TFs
-## 5. mycolors.rds: fixed color palette, will be used in all downstream analysis
+## 2. rna.csv: gene expression of all genes
+## 3. rna_TF.csv: gene expression of all TFs
+## 4. mycolors.rds: fixed color palette, will be used in all downstream analysis
 # plots:
 ## 1. age distribution 
 ## 2. sex distribution
@@ -52,14 +51,11 @@ samples <- unique(meta$id)
 pr <- pr[All_TFs,samples]
 rna_TF <- rna[All_TFs,samples] # subset of rna with only TFs' expression
 rna <- rna[,samples]
-pr_normed2 <- zscore(pr)
-
 
 # save to file
 write.table(pr, "pr.tsv", sep = "\t", quote=F)
 write.table(rna_TF, "rna_TF.tsv", sep = "\t", quote=F)
 write.table(meta, "meta.tsv", sep='\t', quote=F, row.names=F)
-write.table(pr_normed2, "pr_normed2.tsv", sep = "\t", quote=F)
 
 
 ## fix the annotation colors-------------------------------------------------------------
