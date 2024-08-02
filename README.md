@@ -10,6 +10,7 @@ Integrative single cell analysis with Taiji framework, featuring:
     - [run cellchat for individual](https://github.com/cong-003/Taiji_ALTRA/blob/main/scripts/cellchat_analysis.r)
     - [ccc combined analysis]()
 -  binary classification model
+-  pathogenic gene expression
 
 Taiji ALTRA workflow
 <img src="https://github.com/cong-003/Taiji_ALTRA/blob/main/figures/workflow.png" width="800">
