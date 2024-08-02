@@ -105,10 +105,8 @@ get_ccc_net <- function(i){
 	print(paste0("Finished ccc analysis: ", sample))
 }
 
-o <- lapply(seq_along(samples), get_seurat_object)
-# o <- lapply(c(44:67), get_seurat_object)
-
-o <- lapply(seq_along(samples), get_ccc_net)
+o <- lapply(seq_along(samples), get_seurat_object) # get input for cellchat
+o <- lapply(seq_along(samples), get_ccc_net) # get cellchat output objects
 
 
 
