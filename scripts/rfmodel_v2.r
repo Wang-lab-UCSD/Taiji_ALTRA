@@ -2,25 +2,20 @@
 library(caret)
 library(dplyr)
 library(parallel)
-setwd('/home/jupyter/output_20230310/post-analysis/')
 
-# data2 <- read.csv('data_for_rf_model.csv', row.names = 1)
-# data2 <- read.csv('data_for_rf_model_70_cytokines.csv', row.names = 1)
-# data2 <- read.csv('data_for_rf_model_no_receptor.csv', row.names = 1)
-# data2 <- read.csv('data_for_rf_model_270_genes.csv', row.names = 1)
-data2 <- read.csv('data_for_rf_model_converter.csv', row.names = 1)
-# data2 <- read.csv('data_for_rf_model_converter_both_C4.csv', row.names = 1)
-# data2 <- read.csv('data_antibody_for_rf_model.csv', row.names = 1)
-# data2 <- read.csv('data_antibody_for_rf_model_converter.csv', row.names = 1)
+# how to prepare: see `Fig_pathogenic_valid.ipynb` section 4.1
+maindir <- "/home/jupyter/paper_figures/pathogenic/" # subject to change
+data2 <- read.csv('data_for_rf_model.csv', row.names = 1)
+max_feat = 65 # should be smaller than the number of samples
 
-# max_feat = 67
-# max_feat = 34
-max_feat = 26
-# max_feat = 4
+# create dir for results
+subDir <- 'rfmodel'
+dir.create(file.path(mainDir, subDir), showWarnings = FALSE)
+
+# use more cpu resources
 numCores = detectCores()
 print(numCores)
 
-# from Barton's code
 randomForestModelFitter = function(outer_seed, max_featureCount=max_feat, dependent_var='class'){
     
     # set random seed
@@ -90,7 +85,7 @@ randomForestModelFitter = function(outer_seed, max_featureCount=max_feat, depend
         rfClassModel_testAUC_name = paste0(runName, "_predictors", featureCount, "_rfClass_testAUC")
         modelData_list[[rfClassModel_testAUC_name]] = roc_score  ### STORE AUC
         }
-    saveRDS(modelData_list, file = paste0("rfmodels/rfmodel_converter_C2/seed",outer_seed,"_rfClass_list.RDS"))
+    saveRDS(modelData_list, file = paste0(subDir,"/seed",outer_seed,"_rfClass_list.RDS"))
     }
 
 tmp = mclapply(1:100,randomForestModelFitter,mc.cores=numCores)
