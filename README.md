@@ -8,7 +8,7 @@ Integrative single cell analysis with Taiji framework, featuring:
 -  [signature identification with unsupervised Kmeans clustering](https://nbviewer.org/github/cong-003/Taiji_ALTRA/blob/main/tutorial/Fig_signature/Fig_signature.ipynb?flush_cache=true)
 -  cellular communication network analysis
     - [run cellchat for individual](https://github.com/cong-003/Taiji_ALTRA/blob/main/scripts/cellchat_analysis.r)
-    - [ccc combined analysis](https://nbviewer.org/github/cong-003/Taiji_ALTRA/blob/main/tutorial/Fig_cellchat/Fig_cellchat.ipynb?flush_cache=true)
+    - [ccc combined analysis](https://nbviewer.org/github/Wang-lab-UCSD/Taiji_ALTRA/blob/main/tutorial/Fig_cellchat/Fig_cellchat.ipynb)
 -  [pathogenic gene expression](https://nbviewer.org/github/Wang-lab-UCSD/Taiji_ALTRA/blob/main/tutorial/Fig_pathogenic_gene/Fig_pathogenic_valid.ipynb)
 -  [binary classification model](https://github.com/cong-003/Taiji_ALTRA/blob/main/scripts/rfmodel_v2.r)
 
