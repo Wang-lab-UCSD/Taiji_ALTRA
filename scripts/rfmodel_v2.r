@@ -10,7 +10,7 @@ max_feat = 65 # should be smaller than the number of samples
 
 # create dir for results
 subDir <- 'rfmodel'
-dir.create(file.path(mainDir, subDir), showWarnings = FALSE)
+dir.create(file.path(maindir, subDir), showWarnings = FALSE)
 
 # use more cpu resources
 numCores = detectCores()
