@@ -30,4 +30,4 @@
 # Pathogenic genes page
 -  [heatmap image](https://github.com/Wang-lab-UCSD/Taiji_ALTRA/blob/main/website/hp_top30_feature_rna_max.pdf)
 -  text: "Normalized gene expression of top 30 predictors for At-Risk/ERA and control participants in G2 and G4 clusters respectively. For each gene, the maximum gene expression across clusters was taken within each Kmeans group and each individual. Rows represent mediators while columns represent patients. Red cell represents a higher expression level of the cytokine in the patient. Top 30 predictor cytokines are uniformly more active in At-Risk/ERAs compared to controls. Example genes include MMP23B, CCL4, IL12A, TNFSF14, IL15, NOTCH1, CCL5, and TGFB1."
--  
+-  images for each gene can be found: https://github.com/Wang-lab-UCSD/Taiji_ALTRA/tree/main/website/pathogenic 
