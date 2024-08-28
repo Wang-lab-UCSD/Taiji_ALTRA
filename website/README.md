@@ -10,5 +10,20 @@
 
 # Umap page
 -  images for each individual can be found: https://github.com/Wang-lab-UCSD/Taiji_ALTRA/tree/main/website/umap 
--  
+-  Example image: [umap for participant 1](https://github.com/Wang-lab-UCSD/Taiji_ALTRA/blob/main/website/umap/p1_UMAPs.pdf). Each pdf includes five images:
+   1. RNA-seq only
+   2. ATAC-seq only
+   3. Co-embedding colored by cell types
+   4. Co-embedding colored by assays
+   5. color palatte for cell types
 
+# Cellular network page
+-  [heatmap image](https://github.com/Wang-lab-UCSD/Taiji_ALTRA/blob/main/website/hp_patients_across_celltypes_n_sig_clusters.pdf)
+-  summary images can be found: https://github.com/Wang-lab-UCSD/Taiji_ALTRA/tree/main/website/cellchat/ind_pseudobulk_cluster_network
+    - legend: 
+-  specific pathway images can be found: https://github.com/Wang-lab-UCSD/Taiji_ALTRA/tree/main/website/cellchat/pathway_network
+
+# Pathogenic genes page
+-  [heatmap image](https://github.com/Wang-lab-UCSD/Taiji_ALTRA/blob/main/website/hp_top30_feature_rna_max.pdf)
+-  text: "Normalized gene expression of top 30 predictors for At-Risk/ERA and control participants in G2 and G4 clusters respectively. For each gene, the maximum gene expression across clusters was taken within each Kmeans group and each individual. Rows represent mediators while columns represent patients. Red cell represents a higher expression level of the cytokine in the patient. Top 30 predictor cytokines are uniformly more active in At-Risk/ERAs compared to controls. Example genes include MMP23B, CCL4, IL12A, TNFSF14, IL15, NOTCH1, CCL5, and TGFB1."
+-  
