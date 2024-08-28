@@ -19,9 +19,13 @@
 
 # Cellular network page
 -  [heatmap image](https://github.com/Wang-lab-UCSD/Taiji_ALTRA/blob/main/website/hp_patients_across_celltypes_n_sig_clusters.pdf)
+-  text: "Heatmap of all participants in G2 across cell types. The horizontal axis shows the individual participants and the vertical axis shows each cell type. Side bar represents the disease states of participants. Color represents the number of clusters per cell type for each participant. All the At-Risk and ERA participants had the signature in at least one cell type but the combination and distribution of cell types are highly variable. For the participants with more than one signature clusters, cellular network plots can be visualized using the search box. Try searching: p3, p10, etc"
 -  summary images can be found: https://github.com/Wang-lab-UCSD/Taiji_ALTRA/tree/main/website/cellchat/ind_pseudobulk_cluster_network
-    - legend: 
+    - we only need left hand side of each image
+    - text: "Color represents the cell type and thickness of edge weight is proportional to the interaction strength. Thicker edge line indicates stronger signal. Solid and open circles represent source and target respectively. The edge thickness was normalized and comparable across different participants."
 -  specific pathway images can be found: https://github.com/Wang-lab-UCSD/Taiji_ALTRA/tree/main/website/cellchat/pathway_network
+     - we only need left hand side of each image
+     - add title of pathway, so that users know what the network is for
 
 # Pathogenic genes page
 -  [heatmap image](https://github.com/Wang-lab-UCSD/Taiji_ALTRA/blob/main/website/hp_top30_feature_rna_max.pdf)
