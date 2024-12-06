@@ -7,6 +7,7 @@
 # PageRank page
 -  [heatmap image](https://github.com/Wang-lab-UCSD/Taiji_ALTRA/blob/main/website/hp_normed2_allTFs_partial_labels.pdf)
 -  text: "PageRank scores heatmap of all TFs across all pseudo-bulk clusters. Labeled TFs are top 10 TFs from each Kmeans group. Clusters in columns are ordered by Kmeans group and their disease states are labeled with two color palettes. The first palette is red for Early RA, yellow for At-Risk, and green for controls. The second is green for CON and orange for At-Risk/ERA. Color of the cell indicates the normalized PageRank scores with red displaying high scores. Each Kmeans group displayed distinct dynamic patterns of TF activity. G2 has the largest number of specific TFs."
+-  The kmeans group information of TFs can be found [here](https://github.com/Wang-lab-UCSD/Taiji_ALTRA/blob/main/tables/Table_S5_Kmeans_groups.xlsx). For the TFs not appearing in the spreadsheet, assign them as 'non-specific'.
 
 # Umap page
 -  images for each individual can be found: https://github.com/Wang-lab-UCSD/Taiji_ALTRA/tree/main/website/umap 
