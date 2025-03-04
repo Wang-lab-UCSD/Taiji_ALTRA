@@ -336,13 +336,6 @@ main <- function(i,min.cell=minCell){
     file.path <- gsub("_archr.arrow","_fragments.tar.gz",arrow_file)
     mat <- fread(file.path, header = FALSE)
 
-    c1 = gsub("_query","",rownames(itg[which(itg$Co_clusters=="1"),]))
-
-    str(mat)
-    # proj@cellColData
-    c1 = gsub(".*#","",c1)
-    tail(c1)
-
     # gather peaks in the same cluster
     getPeaks <- function(i,min.peak=minPeak){
       c1 = gsub("_query","",rownames(itg[which(itg$Co_clusters==i),]))
