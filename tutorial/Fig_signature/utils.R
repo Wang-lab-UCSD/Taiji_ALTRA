@@ -15,6 +15,29 @@ zscore <- function(df){
                            
 ## calculate covariance, x is the matrix
 co.var <- function(x) ( matrixStats::rowSds(x) / matrixStats::rowMeans2(x) )
+
+## find outliers from a distribution
+find_outlier_feature <- function(data,iqr_multiplier=50,sample_threshold=2){
+    n_features <- nrow(data)
+    outlier_features <- logical(n_features)
+    for (i in 1:n_features){
+        feature_values <- as.matrix(pr)[i,]
+        # Calculate Q1, Q3, and IQR
+        q1 <- quantile(feature_values, 0.25)
+        q3 <- quantile(feature_values, 0.75)
+        iqr <- q3 - q1
+        upper_bound <- q3+iqr_multiplier*iqr
+        
+        # Count samples exceeding the upper bound
+        outlier_count <- sum(feature_values > upper_bound)
+        
+        # check if the feature meets the outlier criteria
+        if (outlier_count >= sample_threshold){
+            outlier_features[i] <- TRUE
+        }     
+    }
+    return(which(outlier_features))
+}
     
 ## load gene expression data, need to specify the dir 
 ## clean the data by removing columns with colSum==0 and rows with rowSum==0
@@ -52,3 +75,5 @@ load_pr <- function(dir,samples=NULL){
   }
   return(df)
 }
+
+                               
