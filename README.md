@@ -19,8 +19,8 @@ Hypothesis in the paper
 <img src="https://github.com/cong-003/Taiji_ALTRA/blob/main/figures/hypothesis.png" width="800">
 
 ## Resources
--  tutorial and demo:
--  talk at ACR meeting: https://acrabstracts.org/abstract/integrated-single-cell-multi-omics-analysis-in-at-risk-for-future-rheumatoid-arthritis-ra-and-early-ra-reveals-shared-transcription-factor-profiles-in-multiple-cell-lineages/ 
+- [data explorer] (https://wangweilab.shinyapps.io/Taiji_Altra/)
+- [talk at ACR meeting] (https://acrabstracts.org/abstract/integrated-single-cell-multi-omics-analysis-in-at-risk-for-future-rheumatoid-arthritis-ra-and-early-ra-reveals-shared-transcription-factor-profiles-in-multiple-cell-lineages/) 
 
 ## How to cite
-https://www.biorxiv.org/content/10.1101/2025.02.08.619913v1 
+[preprint](https://www.biorxiv.org/content/10.1101/2025.02.08.619913v1)
