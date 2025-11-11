@@ -35,15 +35,19 @@
 
 # Pathogenic genes page
 
-- [heatmap image](https://github.com/Wang-lab-UCSD/Taiji_ALTRA/blob/main/website/hp_top30_feature_rna_max.pdf)
-- text: "Normalized gene expression of top 30 predictors for At-Risk/ERA and control participants in G2 and G4 clusters respectively. For each gene, the maximum gene expression across clusters was taken within each Kmeans group and each individual. Rows represent mediators while columns represent patients. Red cell represents a higher expression level of the cytokine in the patient. Top 30 predictor cytokines are uniformly more active in At-Risk/ERAs compared to controls. Example genes include *MMP23B*, *TGFB1*, *IFNL1*, *IL15*, *NOTCH1*, and *CCL5*."
+- [heatmap image](https://github.com/Wang-lab-UCSD/Taiji_ALTRA/blob/main/website/hp_top63_feature_rna_max.pdf)
+- text: "Normalized gene expression of 63 pathogenic genes in At-Risk/ERA and control participants. For each gene, the maximum gene expression across clusters was taken within each Kmeans group and each individual. 
+  
+  Rows represent mediators ordered by the descending predictive power. For example, MMP23B is the most predictive gene to distinguish At-Risk/ERA from controls
+  
+  Identified pathogenic genes are uniformly more active in At-Risk/ERAs compared to controls. Example genes include *MMP23B*, *TGFB1*, *IFNL1*, *IL15*, *NOTCH1*, and *CCL5*."
+
 - images for each gene can be found: https://github.com/Wang-lab-UCSD/Taiji_ALTRA/tree/main/website/pathogenic 
 
 # additional notes
 
-1. text don't take the total width, should leave some space from both sides
+1. update pathogenic page to include all 63 genes, place search bar in the center, remove the "Gene Name" text because each plot already has title
 2. paper link and github link should be larger and closer
 3. Example Umap should take the whole screen.
 4. Provide toggle to select participant in Umap and toggle to select gene in pathogenic section
-5. affected samples: KT00006 (p34), KT00012 (p35), KT00015 (p36), KT00055 (p10), KT00056 (p11), KT00057 (p12), KT00060 (p13)
 
