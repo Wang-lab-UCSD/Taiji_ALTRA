@@ -15,7 +15,6 @@ Integrative single cell analysis with Taiji framework, featuring:
 Taiji ALTRA workflow
 <img src="https://github.com/cong-003/Taiji_ALTRA/blob/main/figures/workflow.png" width="800">
 
-Hypothesis in the paper
 <img src="https://github.com/cong-003/Taiji_ALTRA/blob/main/figures/hypothesis.png" width="800">
 
 ## Resources

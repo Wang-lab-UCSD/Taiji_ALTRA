@@ -23,6 +23,8 @@
    5. color palatte for cell types
 
 # Cellular network page
+
+- Overview: Understanding how the signature cell inflammation signals are transmitted
 <!-- -  [heatmap image](https://github.com/Wang-lab-UCSD/Taiji_ALTRA/blob/main/website/hp_patients_across_celltypes_n_sig_clusters.pdf)
 -  text: "Heatmap of all participants in G2 across cell types. The horizontal axis shows the individual participants and the vertical axis shows each cell type. Side bar represents the disease states of participants. Color represents the number of clusters per cell type for each participant. All the At-Risk and ERA participants had the signature in at least one cell type but the combination and distribution of cell types are highly variable. For the participants with more than one signature clusters, cellular network plots can be visualized using the search box. Try searching: p3, p10, etc" -->
 <!-- -  summary images can be found: https://github.com/Wang-lab-UCSD/Taiji_ALTRA/tree/main/website/cellchat/ind_pseudobulk_cluster_network
@@ -48,6 +50,10 @@
 
 1. update pathogenic page to include all 63 genes, place search bar in the center, remove the "Gene Name" text because each plot already has title
 2. paper link and github link should be larger and closer
-3. Example Umap should take the whole screen.
-4. Provide toggle to select participant in Umap and toggle to select gene in pathogenic section
+3. cellular network: 
+    - shrink the image.
+    - update the overview
+    - center the search bar and title 
 
+4. additional search bar: how to design the layout
+    
