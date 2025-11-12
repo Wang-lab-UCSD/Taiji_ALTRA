@@ -35,6 +35,14 @@
   - example image title: "participant 7 - TGFB1"
   - text: "Edge thickness: interaction strength"
 
+- outgoing/signaling figures: https://github.com/Wang-lab-UCSD/Taiji_ALTRA/tree/main/website/cellchat/sender_receiver_heatmap
+  - example image title: "signaling pathway: TGFB1_TGFBR1_TGFBR2"
+  - text: Red color represents the total outgoing signal strength while blue represents the total incoming signal strength
+
+- expression levels of induced genes: https://github.com/Wang-lab-UCSD/Taiji_ALTRA/tree/main/website/cellchat/receptor_expression_heatmap
+  - example image title: "TGFB1 induced genes expression in receptors"
+
+
 # Pathogenic genes page
 
 - [heatmap image](https://github.com/Wang-lab-UCSD/Taiji_ALTRA/blob/main/website/hp_top63_feature_rna_max.pdf)
@@ -56,4 +64,5 @@
     - center the search bar and title 
 
 4. additional search bar: how to design the layout
+    - instead of searching mediator, let user search signaling pair instead. For example: "TGFB1_TGFBR1_TGFBR2": mediator is TGFB1 and receptors are TGFBR1 and TGFBR2
     
