@@ -38,9 +38,11 @@
 - outgoing/signaling figures: https://github.com/Wang-lab-UCSD/Taiji_ALTRA/tree/main/website/cellchat/sender_receiver_heatmap
   - example image title: "signaling pathway: TGFB1_TGFBR1_TGFBR2"
   - text: Red color represents the total outgoing signal strength while blue represents the total incoming signal strength
+  - note: a txt file with all the pairs that user can choose. In total 69 pairs.
 
 - expression levels of induced genes: https://github.com/Wang-lab-UCSD/Taiji_ALTRA/tree/main/website/cellchat/receptor_expression_heatmap
   - example image title: "TGFB1 induced genes expression in receptors"
+  - note: a txt file with all the pairs that user can choose. In total 71 pairs. Two more pairs: `COL4A4_CD44`, `TNFSF13B_TNFRSF13C`
 
 
 # Pathogenic genes page
