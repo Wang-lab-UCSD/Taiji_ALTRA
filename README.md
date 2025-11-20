@@ -22,4 +22,4 @@ Taiji ALTRA workflow
 - [talk at ACR meeting](https://acrabstracts.org/abstract/integrated-single-cell-multi-omics-analysis-in-at-risk-for-future-rheumatoid-arthritis-ra-and-early-ra-reveals-shared-transcription-factor-profiles-in-multiple-cell-lineages/) 
 
 ## How to cite
-[preprint](https://www.biorxiv.org/content/10.1101/2025.02.08.619913v1](https://www.biorxiv.org/content/10.1101/2025.02.08.619913v2)
+[preprint](https://www.biorxiv.org/content/10.1101/2025.02.08.619913v2)
